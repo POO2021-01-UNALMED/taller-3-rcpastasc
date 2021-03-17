@@ -7,55 +7,60 @@ public class Tv {
 	public boolean estado;
 	private int volumen = 1;
 	private Control control;
-	public static int numTv;
+	public static int numTV;
 	
-	public Tv(Marca marc, boolean est) {
-		marca = marc;
-		estado = est;
+	public TV(Marca marca, boolean estado) {
+		this.marca = marca;
+		this.estado = estado;
+		setNumTV(getNumTV()+1);
 	}
 	
 	public Marca getMarca() {
 		return marca;
 	}
 	
-	public void setMarca(Marca marc) {
-		marca = marc;
+	public void setMarca(Marca marca) {
+		this.marca = marca;
 	}
 	
 	public Control getControl() {
 		return control;
 	}
 	
-	public void setControl(Control contr) {
-		control = contr;
+	public void setControl(Control control) {
+		this.control = control;
 	}
 	
 	public int getPrecio() {
 		return precio;
 	}
 	
-	public void setPrecio(int pre) {
-		precio = pre;
+	public void setPrecio(int precio) {
+		this.precio = precio;
 	}
 	
 	public int getVolumen() {
 		return volumen;
 	}
 	
-	public void setVolumen(int volum) {
-		volumen = volum;
+	public void setVolumen(int volumen) {
+		this.volumen = volumen;
 	}
 	
 	public int getCanal() {
 		return canal;
 	}
 	
-	public void setCanal(int cana) {
-		canal = cana;
+	public void setCanal(int canal) {
+		this.canal = canal;
 	}
 	
-	static int conteo() {  //???
-		return numTv++;
+	static int getNumtv() {  //???
+		return numTV;
+	}
+	
+	public static void setNumTV(int numTV) {
+		TV.numTV = numTV;
 	}
 	
 	public void turnOn() {
